@@ -41,3 +41,36 @@ def search_contact():
             return
 
     print("Contact not found!")
+
+def delete_all():
+
+    slam_book.clear()
+    print("All contacts deleted")
+
+def menu():
+        
+        while True:
+            print("\n==========SLAMBOOK============")
+            print("1. Add contact")
+            print("2.Display contact")
+            print("3.Search contact")
+            print("4.Delete all")
+            print("5.Exit")
+
+            choice=input("Choose an option:")
+
+            if choice == "1":
+                add_contact()
+            elif choice == "2":
+                display_contact()
+            elif choice == "3":
+                search_contact()
+            elif choice == "4":
+                delete_all()
+            elif choice =="5":
+                print("Thank you for using the slambook")
+                sys.exit()
+            else:
+                print("Invalid choice!!")
+
+menu()
